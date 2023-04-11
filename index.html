@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <link rel="stylesheet" href="./pjct.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+    <body>
+      <div id="main">
+        <div class="task task-text"><b>TASK </b><span class="list">LISTS</span></div>
+        <div class="but"><button id="add" onclick="popup()">+</button> <span class="add1">ADD ITEM</span></div>
+        <div id="no">No Items in the todo list</div>
+      </div>
+      <button class="back-button invisible">Back</button>
+      
+       <div id="popup">
+        <span id="box">Add Task</span><br>
+        <input type="text" id="card" value="" placeholder="Enter Task Name"><br>
+        <button class="addbtn" id="addcard">Add</button>
+        <button class="addbtn" onclick="closepopup()">close</button>   
+    </div>
+      <div class="flex-container"></div> 
+      <div class="blur-background"></div>
+      <div class="cardhead"></div>
+
+   <script src="./pjct.js"></script>
+</body>
+</html>

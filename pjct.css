@@ -1,0 +1,275 @@
+body{
+  background-color: black;  
+  } 
+ .task{
+     color: rgb(252, 251, 251);
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bolder;
+     font-size: 60px;
+     margin-left: 80px;
+     margin-top: 80px;
+     width:auto;
+     display: block;
+ }
+ .list{
+     font-family: 'Montserrat', sans-serif;
+     font-size: 50px;
+ }
+ #no{
+     font-family: 'Montserrat', sans-serif;
+     color: rgb(207, 48, 48);
+     margin-left: 80px;
+     font-size: 40px;
+     width: auto;
+     margin-top: 50px;
+     font-weight: 900;
+ }
+ #add{
+   color:blue;
+   border-radius: 50%;
+   font-size: xx-large;
+   width: auto;
+   height: auto;
+   cursor:pointer;
+   margin-left: 75%;  
+ }
+ .but{
+  margin-top:-60px;
+ }
+ .add1{
+   color:aliceblue;
+   margin-top: 40px;
+   font-size: x-large;
+ }
+ #popup{
+   height: 180px;
+   width: 350px;
+   border: 2px solid red;
+   border-radius: 10px;
+   position:fixed;
+   left: 500px;
+   top: 100px;
+   text-align: center;
+   font-size: 35px;
+   background-color: whitesmoke;
+   display:none;
+ }
+ #card{
+  margin-top: 20px;
+
+ }
+ .popup{
+  height: 200px;
+   width: 350px;
+   border: 2px solid red;
+   border-radius: 10px;
+   position:fixed;
+   left: 500px;
+   top: 100px;
+   text-align: center;
+   font-size: 35px;
+   background-color: whitesmoke;
+   /* display:none; */
+ }
+ .blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.17);
+  backdrop-filter: blur(4px);
+  z-index: 999; 
+  display: none; 
+}
+.addbtn {
+   height: 30px;
+   width:80px;
+   border-radius: 30px;
+   background-color: rgb(59, 239, 43);
+   border:0px; 
+   margin-top: 20px;
+ }
+ #list {
+   list-style-type: none;
+   text-align: left;
+   font-size: 25px;
+   color:purple;
+ }
+ #hr1{
+  border: 1px chocolate solid;
+  margin: 0px;
+  margin-top: -10px;
+ }
+ .blur {
+   backdrop-filter: blur(20px);
+ }
+ button {
+   background-color: #fff;
+   border: 1px solid #ccc;
+   padding: 5px 10px;
+   cursor: pointer;
+   width:60px;
+ }
+ 
+ button:hover {
+   background-color: #f2f2f2;
+ }               
+/* Flex container */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px;
+  margin-top: 60px;
+  margin-left: 50px;
+  margin-right: 80px;
+}
+/* Flex card */
+.flex-card {
+  height: 350px;
+   width: 250px;
+   border: 2px solid red;
+   list-style-type: none;
+   background-color: rgb(231, 229, 224);
+   border-radius: 20px;
+   margin: 10px;
+   display: flex;
+    flex-direction: column;
+}
+#cardlist  {
+  margin-left: 20px;
+  font-size: large;
+}
+
+.flexbutton {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+}
+
+/* Flex card title */
+.flex-card h3 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: x-large;
+   color: rgb(240, 0, 0); 
+}
+
+/* List */
+.flex-card ul {
+  margin: 10px 0;
+  flex-grow: 1;
+  height: 200px;
+  overflow-y: auto;
+  font-weight: bolder;
+  font-size: larger;
+  color:#00cc77;
+}
+li::marker{
+  content:'👉';
+}
+
+/* List item */
+.flex-card li {
+  margin-left: 15px;
+  font-size: larger;
+}
+
+/* Pop-up title */
+.popup h3 {
+  margin-top: 0px;
+}
+
+/* Pop-up input field */
+.popup input[type="text"] {
+  width: 300px;
+  padding: 5px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Pop-up buttons */
+.popup button {
+  width: 120px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 120px;
+  background-color: #0077cc;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Pop-up Add button */
+.popup button:nth-child(2) {
+  background-color: #00cc77;
+}
+ul li {
+  cursor: pointer;
+}
+
+ul li.mark {
+  text-decoration: line-through;
+  color: gray;
+}
+.flex-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.centered {
+  position:fixed;
+  left:40%;
+  top:30%;
+ }
+.centered .flex-card {
+  width: 30%;
+}
+.centered ul{
+  height: 320px;
+  font-size: x-large;
+}
+.centered h3{
+  font-size: xx-large;
+  
+}
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+.hide-task {
+  display: none;
+}
+.task .text {
+  visibility: visible;
+}
+
+.task.centered .text {
+  visibility: hidden;
+}
+.invisible {
+  visibility: hidden;
+}
+.cardhead{
+  color: white;
+  font-size: xxx-large;
+  position:fixed;
+  top:40px;
+  margin-left: 55%;
+  margin-top: 5%;
+}
+.flex-container .flex-card.centered {
+  display: block;
+}
+.back-button{
+  margin-left: 30%;
+  margin-top: 0;
+  border-radius: 10px;
+}
+.back-button:hover{
+  background-color: gray;
+}
