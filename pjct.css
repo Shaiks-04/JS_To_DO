@@ -127,8 +127,8 @@ body{
 }
 /* Flex card */
 .flex-card {
-  height: 350px;
-   width: 250px;
+  height: 400px;
+   width: 300px;
    border: 2px solid red;
    list-style-type: none;
    background-color: rgb(231, 229, 224);
@@ -222,12 +222,15 @@ ul li.mark {
   position:fixed;
   left:40%;
   top:30%;
+  width:350px;
+  height: 400px;
  }
 .centered .flex-card {
-  width: 30%;
+  width: 350px;
+  height:450px;
 }
 .centered ul{
-  height: 320px;
+  height: 260px;
   font-size: x-large;
 }
 .centered h3{
@@ -272,4 +275,115 @@ ul li.mark {
 }
 .back-button:hover{
   background-color: gray;
+}
+@media screen and (min-width:350px) and (max-width:760px){
+  .task {
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  .list{
+    font-size: 35px;
+  }
+  .but{
+    font-size: 40px;
+  }
+  #add{
+    font-size: 30px;
+    margin-top: 140px;
+    margin-left: 5px;
+     height: 43px;
+    /* width: 30px; */ 
+    padding-bottom: 20px;
+  }
+  #no{
+    font-size: 25px;
+    margin-left: 25px;
+    margin-top: -100px;
+    margin-bottom: 20px;
+  }
+  #popup{
+    position:fixed;
+   left: 30px;
+   top: 250px;
+   width: 300px;
+  }
+  .popup{
+    position:fixed;
+   left: 30px;
+   top: 250px;
+   width: 300px;
+  }
+  .popup input[type="text"]{
+    width: 250px;
+  }
+  .centered{
+  position:fixed;
+  left:3%;
+  top:30%;
+  right: 2px;
+  height: 300px;
+ }
+ .flex-card.centered {
+  width: 320px;
+  height: 400px;
+}
+ .back-button{
+  position:fixed;
+  top:10%;
+  left: -100px;
+ }
+ .flex-card{
+  width: 400px;
+  height: 300px;
+ }
+
+}
+@media screen and (min-width:761px) and (max-width:800px){
+  #popup{
+    position:fixed;
+   left: 250px;
+   top: 200px;
+   width: 300px;
+  }
+  .popup{
+    position:fixed;
+   left: 230px;
+   top: 250px;
+   width: 350px;
+  }
+  .popup input[type="text"]{
+    width: 250px;
+  }
+  .centered{
+  position:fixed;
+  left:23%;
+  top:20%;
+  right: 2px;
+  height: 300px;
+ }
+ .flex-card.centered {
+  width: 420px;
+  height: 500px;
+}
+ .back-button{
+  position:fixed;
+  top:10%;
+  left: -160px;
+ }
+ .flex-card{
+  width: 250px;
+  height: 380px;
+ }
+ .centered ul{
+  height: 350px;
+ }
+ .add-button.centered{
+  height: 200px;
+  width: 300px;
+ }
+ .cardhead{
+  position: fixed;
+  right: 360px;
+ }
+
 }
