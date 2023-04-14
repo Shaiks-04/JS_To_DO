@@ -76,8 +76,8 @@ cardTitle.addEventListener('click', () => {
   document.querySelector('.cardhead').innerText = title;
   document.querySelector('.cardhead').classList.remove('invisible');
   if (flexCard.classList.contains('centered')) {
-    flexCard.style.width = '350px';
-    flexCard.style.height = '450px';
+    // flexCard.style.width = '350px';
+    // flexCard.style.height = '450px';
     document.querySelector('.back-button').classList.remove('invisible'); // Show the back button
   } 
   else {
