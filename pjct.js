@@ -49,6 +49,8 @@ function popup(){
    closeButton.innerText = 'Close';
    closeButton.addEventListener('click', () => {
      popup.remove();
+     const background = document.querySelector('.blur-background');
+    background.style.display = 'none';
    });
    popup.appendChild(closeButton);
  
@@ -133,6 +135,9 @@ backButton.addEventListener('click', () => {
   function addBtnpopup() {
     // Create the pop-up for adding an item to the list
       const background = document.querySelector('.blur-background');
+      background.style.display = 'block';
+
+
     const popup = createPopup('Add New List', 'Add', () => {
       // Get the input value and create a new list item
       const listItemTitle = popup.querySelector('input').value;
