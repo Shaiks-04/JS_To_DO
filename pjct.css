@@ -48,30 +48,31 @@ body{
    border-radius: 10px;
    position:fixed;
    left: 500px;
-   top: 100px;
+   top: 200px; 
    text-align: center;
    font-size: 35px;
    background-color: whitesmoke;
    display:none;
  }
+ 
  #card{
   margin-top: 20px;
 
  }
  .popup{
-  height: 200px;
+  height: 190px;
    width: 350px;
    border: 2px solid red;
    border-radius: 10px;
    position:fixed;
-   left: 500px;
-   top: 100px;
+   left: 520px;
+   top: 180px;
    text-align: center;
    font-size: 35px;
    background-color: whitesmoke;
    /* display:none; */
  }
-.blur-background {
+ .blur-background {
   position: fixed;
   top: 0;
   left: 0;
@@ -152,7 +153,8 @@ body{
   margin-top: 10px;
   text-align: center;
   font-size: x-large;
-   color: rgb(240, 0, 0); 
+   color: rgb(240, 0, 0);
+   cursor: pointer; 
 }
 
 /* List */
@@ -201,7 +203,9 @@ li::marker{
   color: #fff;
   cursor: pointer;
 }
-
+.popup button:hover {
+  background-color: #1ec5eb;
+}
 /* Pop-up Add button */
 .popup button:nth-child(2) {
   background-color: #00cc77;
@@ -268,8 +272,9 @@ ul li.mark {
   display: block;
 }
 .back-button{
-  margin-left: 30%;
-  margin-top: 0;
+  position: fixed;
+  left: 10px;
+  top: 10px;
   border-radius: 10px;
 }
 .back-button:hover{
