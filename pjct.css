@@ -369,11 +369,7 @@ ul li.mark {
   width: 420px;
   height: 500px;
 }
- .back-button{
-  position:fixed;
-  top:10%;
-  left: -160px;
- }
+
  .flex-card{
   width: 250px;
   height: 380px;
