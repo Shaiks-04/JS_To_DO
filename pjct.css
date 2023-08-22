@@ -331,9 +331,9 @@ ul li.mark {
  } 
  .cardhead {
   position: absolute;
-  left: 3%;
+  left: 5%;
   top: 15%;
-  width: 350px;
+  width: 320px;
   text-align: center;
  }
  .flex-container{
@@ -344,15 +344,11 @@ ul li.mark {
   width: 320px;
   height: 400px;
 }
- /* .back-button{
-  position:fixed;
-  top:10%;
-  left: -100px;
- } */
+ 
  .flex-card{
-  width: 65vw;
+  width: 75vw;
   margin: auto;
-  height: 320px;
+  height: 60vh;
   margin-bottom: 10vw;
  }
 
