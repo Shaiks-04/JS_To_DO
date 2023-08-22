@@ -222,12 +222,21 @@ ul li.mark {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .centered {
-  position:fixed;
+  position:absolute;
   left:40%;
   top:30%;
   width:350px;
   height: 400px;
  }
+ .cardhead{
+  color: white;
+  font-size: xxx-large;
+  position:absolute;
+  left:40%;
+  top:20%;
+  width:350px;
+  text-align: center;
+}
 .centered .flex-card {
   width: 350px;
   height:450px;
@@ -260,14 +269,7 @@ ul li.mark {
 .invisible {
   visibility: hidden;
 }
-.cardhead{
-  color: white;
-  font-size: xxx-large;
-  position:fixed;
-  top:40px;
-  margin-left: 55%;
-  margin-top: 5%;
-}
+
 .flex-container .flex-card.centered {
   display: block;
 }
@@ -280,7 +282,7 @@ ul li.mark {
 .back-button:hover{
   background-color: gray;
 }
-@media screen and (min-width:350px) and (max-width:760px){
+@media screen and (min-width:200px) and (max-width:450px){
   .task {
     font-size: 40px;
     margin-top: 10px;
@@ -321,20 +323,37 @@ ul li.mark {
     width: 250px;
   }
   .centered{
-  position:fixed;
+  position:absolute;
   left:3%;
   top:30%;
   right: 2px;
   height: 300px;
+ } 
+ .cardhead {
+  position: absolute;
+  left: 3%;
+  top: 15%;
+  width: 350px;
+  text-align: center;
  }
- .flex-card.centered {
+ .flex-container{
+  margin: 0;
+  margin-top: 10vw;
+ }
+ .flex-card .centered {
   width: 320px;
   height: 400px;
 }
-
+ /* .back-button{
+  position:fixed;
+  top:10%;
+  left: -100px;
+ } */
  .flex-card{
-  width: 400px;
-  height: 300px;
+  width: 65vw;
+  margin: auto;
+  height: 320px;
+  margin-bottom: 10vw;
  }
 
 }
@@ -365,7 +384,11 @@ ul li.mark {
   width: 420px;
   height: 500px;
 }
-
+ .back-button{
+  position:fixed;
+  top:10%;
+  left: -160px;
+ }
  .flex-card{
   width: 250px;
   height: 380px;
