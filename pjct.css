@@ -47,14 +47,27 @@ body{
    border: 2px solid red;
    border-radius: 10px;
    position:fixed;
-   left: 500px;
+   left: 550px;
    top: 200px; 
    text-align: center;
    font-size: 35px;
    background-color: whitesmoke;
    display:none;
  }
- 
+ .mark-done-button {
+  background-color: #ccc;
+  border: none;
+  padding: 3px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.marked {
+  text-decoration: line-through;
+}
+  #popup .centered{
+  position:fixed;
+   left: 520px;
+ }
  #card{
   margin-top: 20px;
 
@@ -213,10 +226,18 @@ li::marker{
 ul li {
   cursor: pointer;
 }
-
+ul li button{
+  background-color: rgb(177, 232, 49);
+  border-radius: 10px;
+  width: 90px;
+  margin-left: 40px;
+}
 ul li.mark {
   text-decoration: line-through;
   color: gray;
+}
+.mark-button{
+  width: 100px;
 }
 .flex-card:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -296,7 +317,7 @@ ul li.mark {
   #add{
     font-size: 30px;
     margin-top: 140px;
-    margin-left: 5px;
+    margin-left: 35px;
      height: 43px;
     /* width: 30px; */ 
     padding-bottom: 20px;
@@ -332,7 +353,7 @@ ul li.mark {
  .cardhead {
   position: absolute;
   left: 5%;
-  top: 15%;
+  top: 5%;
   width: 320px;
   text-align: center;
  }
@@ -380,11 +401,7 @@ ul li.mark {
   width: 420px;
   height: 500px;
 }
- .back-button{
-  position:fixed;
-  top:10%;
-  left: -160px;
- }
+ 
  .flex-card{
   width: 250px;
   height: 380px;
