@@ -186,7 +186,7 @@ function addListItem(itemText) {
       const background = document.querySelector('.blur-background');
       background.style.display = 'block';
 
-
+      document.querySelector('.cardhead').classList.add('blur-cardhead');
     const popup = createPopup('Add New List', 'Add', () => {
       // Get the input value and create a new list item
       const listItemTitle = popup.querySelector('input').value;
@@ -201,6 +201,7 @@ function addListItem(itemText) {
   
       popup.remove();
       background.style.display = 'none';
+      document.querySelector('.cardhead').classList.remove('blur-cardhead');
     });
     // Add the pop-up to the body
     document.body.appendChild(popup);
