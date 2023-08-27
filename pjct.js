@@ -1,3 +1,4 @@
+
 function popup(){
   document.getElementById("popup").style.display="block";
   document.querySelector('#main').style.opacity="17%";
@@ -14,11 +15,9 @@ function popup(){
 
      const centeredToggle = document.querySelector('.centered');
     if (centeredToggle) {
-        newCard.classList.add('invisible');
+      newCard.classList.add('invisible');
+
     }
-    //  else {
-    //     newCard.classList.add('uncentered');
-    // }
      document.getElementById("popup").style.display="none";
      document.querySelector('#card').value="";
   document.getElementById("no").style.display="none";
@@ -57,6 +56,8 @@ function popup(){
    const closeButton = document.createElement('button');
    closeButton.innerText = 'Close';
    closeButton.addEventListener('click', () => {
+     document.querySelector('.cardhead').classList.remove('blur-cardhead');
+
      popup.remove();
      const background = document.querySelector('.blur-background');
     background.style.display = 'none';
