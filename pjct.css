@@ -170,7 +170,7 @@ body{
    cursor: pointer; 
 }
 
-/* List */
+/* List */ 
 .flex-card ul {
   margin: 10px 0;
   flex-grow: 1;
@@ -306,6 +306,17 @@ ul li.mark {
 .blur-cardhead {
   filter: blur(5px); 
 }
+.blur-effect {
+  filter: blur(5px);
+}
+.blur-cardhead {
+  filter: blur(5px);
+}
+
+.blur-background {
+  backdrop-filter: blur(5px);
+}
+
 .flex-card li {
   word-wrap: break-word; 
 }
@@ -319,6 +330,10 @@ ul li.mark {
   }
   .but{
     font-size: 40px;
+    position: relative;
+    left: 37vw;
+    bottom: 2vh;
+    width: 54vw;
   }
   #add{
     font-size: 30px;
@@ -348,6 +363,10 @@ ul li.mark {
   }
   .popup input[type="text"]{
     width: 250px;
+  }
+  .back-button{
+    left: 14vw;
+    top: 20vh;
   }
   .centered{
   position:absolute;
@@ -422,7 +441,7 @@ ul li.mark {
  }
  .cardhead{
   position: fixed;
-  right: 360px;
+  left: 20vw;
  }
 
 }
