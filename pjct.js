@@ -2,11 +2,16 @@
 function popup(){
   document.getElementById("popup").style.display="block";
   document.querySelector('#main').style.opacity="17%";
+  document.querySelector('.back-button').classList.add('blur-cardhead'); 
+  document.querySelector('.cardhead').classList.add('blur-cardhead');  
+
  }
 
  // Get the + button and add an event listener
  const addCardBtn = document.getElementById('addcard');
  addCardBtn.addEventListener('click', () => {
+  document.querySelector('.back-button').classList.remove('blur-cardhead'); 
+  document.querySelector('.cardhead').classList.remove('blur-cardhead');  
      const cardTitle = document.querySelector('#card').value;
      const newCard = createFlexCard(cardTitle);
 
@@ -16,6 +21,7 @@ function popup(){
      const centeredToggle = document.querySelector('.centered');
     if (centeredToggle) {
       newCard.classList.add('invisible');
+
 
     }
      document.getElementById("popup").style.display="none";
@@ -27,6 +33,8 @@ function popup(){
  function closepopup(){
    document.getElementById("popup").style.display="none";
    document.querySelector('#main').style.opacity="100%";
+   document.querySelector('.back-button').classList.remove('blur-cardhead'); 
+  document.querySelector('.cardhead').classList.remove('blur-cardhead');  
   }
   
  
@@ -79,7 +87,7 @@ cardTitle.addEventListener('click', () => {
   // Select all the cards and loop through them
   document.querySelectorAll('.flex-card').forEach(card => {
     if (card !== flexCard) { // Check if the card is not the centered card
-      card.classList.add('invisible'); // Add the "invisible" class to hide the card
+      card.classList.add('invisible'); // Adds the "invisible" class to hide the card
     }
   });
   flexCard.classList.toggle('centered');
@@ -90,7 +98,9 @@ cardTitle.addEventListener('click', () => {
   if (flexCard.classList.contains('centered')) {
     // flexCard.style.width = '350px';
     // flexCard.style.height = '450px';
+    document.querySelector('.back-button').classList.remove('blur-cardhead');
     document.querySelector('.back-button').classList.remove('invisible');
+    document.querySelector('.cardhead').classList.remove('blur-cardhead');
     document.querySelector('.but').classList.remove('invisible');
   } 
   else {
@@ -115,11 +125,11 @@ backButton.addEventListener('click', () => {
   document.querySelectorAll('.flex-card').forEach(card => {
     if (card.classList.contains('centered')) {
       card.classList.remove('centered');
-      card.classList.remove('invisible'); // Make sure to remove invisibility
+      card.classList.remove('invisible');
   } else if (card.classList.contains('uncentered')) {
       card.classList.add('invisible');
   } else {
-      // New cards appended outside centered mode should be visible
+     
       card.classList.remove('invisible');
   }
   document.querySelector('.but').classList.remove('invisible');
@@ -143,33 +153,33 @@ list.addEventListener('click', (event) => {
   const target = event.target;
 
   if (target.classList.contains('mark-button')) {
-    const listItem = target.parentElement; // Get the parent list item
+    const listItem = target.parentElement; 
     listItem.classList.toggle('mark');
-    toggleMarkButton(target, listItem.classList.contains('mark'));
+    target.style.display = 'none'; 
+  } else if (target.tagName === 'LI') {
+    const markButton = target.querySelector('.mark-button');
+    if (markButton) {
+      markButton.style.display = 'block'; // Show the "Mark Done" button
+    }
+    target.classList.remove('mark'); // Remove the "mark" class from the text
   }
 });
 
-// Function to toggle the "Mark Done" button text
-function toggleMarkButton(button, marked) {
-  if (marked) {
-    button.textContent = 'Mark Undone';
-  } else {
-    button.textContent = 'Mark Done';
-  }
-}
 
-// Function to add a new list item with a "Mark Done" button
+
 function addListItem(itemText) {
   const listItem = document.createElement('li');
   listItem.textContent = itemText;
 
   const markButton = document.createElement('button');
   markButton.textContent = 'Mark Done';
-  markButton.classList.add('mark-button'); // Add a class to the button for identification
+  markButton.classList.add('mark-button'); 
 
   listItem.appendChild(markButton);
   list.appendChild(listItem);
-} // Create the button container
+}
+
+// Create the button container
   const buttonContainer = document.createElement('div');
   buttonContainer.classList.add('flexbutton');
 
@@ -215,7 +225,25 @@ function addListItem(itemText) {
   deleteButton.addEventListener("click", function() {
     // Remove the flex card from the flex container
     flexContainer.removeChild(flexCard);
+    flexCard.style.width = '';
+    flexCard.style.height = '';
+    document.querySelectorAll('.flex-card').forEach(card => {
+      if (card.classList.contains('centered')) {
+        card.classList.remove('centered');
+        card.classList.remove('invisible'); 
+    } else if (card.classList.contains('uncentered')) {
+        card.classList.add('invisible');
+    } else {
+        // New cards appended outside centered mode should be visible
+        card.classList.remove('invisible');
+    }
+    document.querySelector('.but').classList.remove('invisible');
   });
+    document.querySelector('.cardhead').classList.add('invisible');
+    document.querySelector('.task-text').classList.remove('invisible');
+    backButton.classList.add('invisible');
+  });
+  
 
   // Add the buttons to the container
   buttonContainer.appendChild(addBtn);
@@ -224,7 +252,5 @@ function addListItem(itemText) {
   // Add the button container to the flex card
   flexCard.appendChild(buttonContainer);
   // Create the list
- 
-  
   return flexCard;
 }
