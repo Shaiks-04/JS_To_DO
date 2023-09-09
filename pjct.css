@@ -168,6 +168,7 @@ body{
   font-size: x-large;
    color: rgb(240, 0, 0);
    cursor: pointer; 
+   word-wrap: break-word;
 }
 
 /* List */ 
@@ -248,26 +249,29 @@ ul li.mark {
   top:30%;
   width:350px;
   height: 400px;
+  height: fit-content;
  }
  .cardhead{
   color: white;
-  font-size: xxx-large;
+  font-size: xx-large;
   position:absolute;
-  left:35%;
-  top:10%;
-  width:500px;
+  left:28%;
+  top:12%;
+  word-wrap: break-word;
+  width: 50vw;
+  
   text-align: center;
 }
 .centered .flex-card {
   width: 350px;
-  height:450px;
+  height:450px;  
 }
 .centered ul{
   height: 260px;
   font-size: x-large;
 }
 .centered h3{
-  font-size: xx-large;
+  font-size: x-large;
   
 }
 .hidden {
@@ -295,7 +299,7 @@ ul li.mark {
   display: block;
 }
 .back-button{
-  position: fixed;
+  position: absolute;
   left: 10px;
   top: 10px;
   border-radius: 10px;
@@ -328,12 +332,12 @@ ul li.mark {
   .list{
     font-size: 35px;
   }
-  .but{
-    font-size: 40px;
-    position: relative;
-    left: 37vw;
-    bottom: 2vh;
+ .but{
+    position: absolute;
+    left: 34vw;
+    top: 10vh;
     width: 54vw;
+
   }
   #add{
     font-size: 30px;
@@ -366,7 +370,7 @@ ul li.mark {
   }
   .back-button{
     left: 14vw;
-    top: 20vh;
+    top: 24vh;
   }
   .centered{
   position:absolute;
@@ -377,14 +381,15 @@ ul li.mark {
  } 
  .cardhead {
   position: absolute;
-  left: 5%;
+  left: 10%;
   top: 5%;
   width: 320px;
   text-align: center;
+  font-size: x-large;
  }
  .flex-container{
   margin: 0;
-  margin-top: 10vw;
+  margin-top: 45vw;
  }
  .flex-card .centered {
   width: 320px;
@@ -394,10 +399,12 @@ ul li.mark {
  .flex-card{
   width: 75vw;
   margin: auto;
-  height: 60vh;
   margin-bottom: 10vw;
  }
-
+ .flex-container .flex-card.centered{
+  height: fit-content;
+  margin-top: 10vw;
+ }
 }
 @media screen and (min-width:761px) and (max-width:800px){
   #popup{
@@ -416,7 +423,7 @@ ul li.mark {
     width: 250px;
   }
   .centered{
-  position:fixed;
+  position:absolute;
   left:23%;
   top:20%;
   right: 2px;
@@ -426,7 +433,9 @@ ul li.mark {
   width: 420px;
   height: 500px;
 }
- 
+.flex-container .flex-card.centered{
+  margin-top: 10vw;
+}
  .flex-card{
   width: 250px;
   height: 380px;
@@ -440,8 +449,8 @@ ul li.mark {
   width: 300px;
  }
  .cardhead{
-  position: fixed;
-  left: 20vw;
+  position: absolute;
+  left: 27vw;
  }
 
 }
